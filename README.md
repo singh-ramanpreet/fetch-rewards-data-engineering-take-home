@@ -1,3 +1,25 @@
+# Solution #
+
+Done in `python` lang. Solution program `solution` directory.
+
+### Additional Python Packages
+
+- `msticpy` (for masking `ip` and `device_id`)
+- `psycopg2` (for interacting with `postgres` db)
+
+### Code Explanation
+
+- `get_queue()` and `receive_message()` functions is to retrieve message from SQS queue.
+
+- `parse_msg()` takes the raw message received from SQS and parses (and masks) desired data into python `dict`.
+
+- `write_to_db()` takes the data to be inserted into postgres cursor in `dict` format with keys as column names and values as values.
+
+
+---
+# Original README #
+---
+
 # Fetch Rewards #
 ## Data Engineering Take Home: ETL off a SQS Qeueue ##
 
